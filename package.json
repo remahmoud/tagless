@@ -13,6 +13,7 @@
         "@types/jest": "^29.5.1",
         "@types/node": "^20.2.1",
         "jest": "^29.5.0",
+        "rimraf": "^5.0.1",
         "terser": "^5.17.4",
         "ts-jest": "^29.1.0",
         "ts-node": "^10.9.1",
@@ -21,10 +22,29 @@
     "scripts": {
         "test": "jest",
         "dev": "ts-node src/index.ts",
-        "preminify": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+        "preminify": "rimraf build & tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
         "minify": "terser --compress --mangle --output ./build/mjs/index.js -- ./build/mjs/index.js & terser --compress --mangle --output ./build/cjs/index.js -- ./build/cjs/index.js"
     },
     "files": [
         "build"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/remahmoud/tagless"
+    },
+    "homepage": "https://github.com/remahmoud/tagless#readme",
+    "keywords": [
+        "tagless",
+        "html",
+        "sanitize",
+        "sanitize-html",
+        "sanitize-html-string",
+        "sanitize-html-tags",
+        "sanitize-html-strings",
+        "sanitize-html-tag",
+        "html-sanitizer",
+        "html-sanitize",
+        "html-tags",
+        "html-tag"
     ]
 }
