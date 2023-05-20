@@ -16,6 +16,20 @@ npm install tagless
 
 const tagless = require('tagless')
 
+// or
+
+const { removeAll, removeByTag } = require('tagless')
+
+```
+
+```js
+
+import tagless from 'tagless'
+
+// or
+
+import { removeAll, removeByTag } from 'tagless'
+
 ```
 
 ### removeAll
