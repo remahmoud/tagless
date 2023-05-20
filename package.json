@@ -1,7 +1,7 @@
 {
     "name": "tagless",
     "description": "Tagless is a library that remove html tags from string, it's useful for sanitizing user input",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "import": "./build/mjs/index.js",
     "require": "./build/cjs/index.js",
     "default": "./build/mjs/index.js",
