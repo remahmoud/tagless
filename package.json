@@ -1,0 +1,30 @@
+{
+    "name": "tagless",
+    "description": "Tagless is a library that remove html tags from string, it's useful for sanitizing user input",
+    "version": "1.0.0",
+    "import": "./build/mjs/index.js",
+    "require": "./build/cjs/index.js",
+    "default": "./build/mjs/index.js",
+    "types": "./build/types/index.d.ts",
+    "author": "Mahmoud Ibrahiam",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "@types/jest": "^29.5.1",
+        "@types/node": "^20.2.1",
+        "jest": "^29.5.0",
+        "terser": "^5.17.4",
+        "ts-jest": "^29.1.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "scripts": {
+        "test": "jest",
+        "dev": "ts-node src/index.ts",
+        "preminify": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+        "minify": "terser --compress --mangle --output ./build/mjs/index.js -- ./build/mjs/index.js & terser --compress --mangle --output ./build/cjs/index.js -- ./build/cjs/index.js"
+    },
+    "files": [
+        "build"
+    ]
+}
